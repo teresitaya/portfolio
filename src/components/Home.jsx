@@ -1,21 +1,11 @@
 import React, { useEffect, useState } from "react";
 import ProfileImg from "../assets/images/85.jpeg";
 import EmailSvg from "../assets/images/svg/email-svg.svg";
-import BehanceSvg from "../assets/images/svg/behance-svg.svg";
-import DribleSvg from "../assets/images/svg/drribale-svg.svg";
-import MediumSvg from "../assets/images/svg/medium-svg.svg";
 import HomeSvg from "../assets/images/svg/home-svg.svg";
 import AboutSvg from "../assets/images/svg/about-svg.svg";
 import ResumeSvg from "../assets/images/svg/resume-svg.svg";
-import ServicesSvg from "../assets/images/svg/services-svg.svg";
-import PortfolioSvg from "../assets/images/svg/portfolio-svg.svg";
-import PricingSvg from "../assets/images/svg/pricing-svg.svg";
-import BlogSvg from "../assets/images/svg/blog-svg.svg";
 import ContactSvg from "../assets/images/svg/contact-svg.svg";
-import clientImg1 from "../assets/images/clients-img1.jpg";
-import clientImg2 from "../assets/images/clients-img2.jpg";
-import clientImg3 from "../assets/images/clients-img3.jpg";
-import clientImg4 from "../assets/images/clients-img4.jpg";
+import MediumSvg from "../assets/images/svg/medium-svg.svg";
 import MariaMainImg from "../assets/images/3.jpeg";
 import CircularImg from "../assets/images/circular-img.png";
 import FlowerImg from "../assets/images/flower.png";
@@ -155,12 +145,6 @@ const Home = () => {
             <Link to="mailto:hello@biogi.com" className="profile-media-icons">
               <img src={EmailSvg} alt="email-svg" />
             </Link>
-            <Link to="https://www.behance.net" className="profile-media-icons">
-              <img src={BehanceSvg} alt="behance-svg" />
-            </Link>
-            <Link to="https://dribbble.com" className="profile-media-icons">
-              <img src={DribleSvg} alt="drribale-svg" />
-            </Link>
             <Link to="https://medium.com" className="profile-media-icons">
               <img src={MediumSvg} alt="medium-svg" />
             </Link>
@@ -270,8 +254,7 @@ const Home = () => {
                 {secondTexts[secondTextIndex]}
               </h3>
               <p className="best fade_down">
-              Frontend Architect with 12 years of experience specializing in Angular, React, and cloud-native applications. Expert in architecting scalable frontend solutions using modern frameworks and micro-frontend principles. Passionate about creating intuitive, user-centric interfaces and mentoring development teams. 
-              </p>
+              Crafting seamless digital experiences through modern Frontend Architecture. </p>
               <div className="section-one-btns-main fade_down">
                 <div className="wrapper">
                   <Link className="btn-hover" to="/portfolio">
@@ -298,37 +281,18 @@ const Home = () => {
                 alt="jessica-main-img"
               />
               <div className="worked-box">
-                <p className="worked-more">Worked with more than 100 people</p>
-                <div className="client-img-main position-relative">
-                  <img
-                    className="client-img client-img1"
-                    src={clientImg1}
-                    alt="clients-img1"
-                  />
-                  <img
-                    className="client-img client-img2"
-                    src={clientImg2}
-                    alt="clients-img2"
-                  />
-                  <img
-                    className="client-img client-img3"
-                    src={clientImg3}
-                    alt="clients-img3"
-                  />
-                  <img
-                    className="client-img client-img4"
-                    src={clientImg4}
-                    alt="clients-img4"
-                  />
-                  <p className="worked-more worked-more2"> 100+ Clients</p>
-                </div>
+                <p className="worked-more">
+                  Contributed over 100+ projects
+                </p>
               </div>
             </div>
           </div>
         </section>
         {/* <!-- ====================================== Section Marquee ===================================== --> */}
         <section className="Marquee-main overflow-hidden">
-          <h3 className="fade_up">Trusted by World Leading Brands</h3>
+          <h3 className="fade_up">
+            Technologies
+          </h3>
           <div className="logos logos2">
             <div className="logos-slide">
               <div className="marquee__content">
