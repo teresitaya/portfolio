@@ -1,6 +1,10 @@
 import React, { useEffect, useRef, useMemo } from "react";
 import { Tooltip } from 'react-tooltip';
-
+import AngularImg from "../assets/images/angular.png";
+import NxImg from "../assets/images/nx-logo.svg";
+import ReactImg from "../assets/images/react.png";
+import FigmaImg from "../assets/images/figma-img.png";
+import TypeScriptImg from "../assets/images/typescript.svg";
 const Resume = () => {
   const colors = useMemo(() => [
     "#BCE70C",
@@ -204,7 +208,7 @@ const Resume = () => {
       </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Design Skill ===================================== --> */}
-   {/*    <section className="design-skill-section">
+     <section className="design-skill-section">
         <div className="heading-container">
           <h2 className="section-heading-text design-skill-text fade_up">
             Coding Skills.
@@ -212,44 +216,45 @@ const Resume = () => {
           <div className="line"></div>
         </div>
         <div className="design-skill-sub-section">
-          <div className="design-skills-img-main flip_up">
-            <img src={AngularImg} alt="figma-img" />
+          <div className="design-skills-img-main flip_up" data-tooltip-id="angular" data-tooltip-content="Primary framework with extensive experience across all versions">
+            <img src={AngularImg} alt="figma-img" className="skill-img" />
             <div className="skill-counter-main">
-              <p>94%</p>
-              <p>Angular, Nx</p>
+              <p>96%</p>
+              <p>Angular</p>
             </div>
           </div>
-          <div className="design-skills-img-main photoshop flip_up">
-            <img src={PhotoShopImg} alt="photoshop-img" />
+         <div className="design-skills-img-main photoshop flip_up" data-tooltip-id="nx" data-tooltip-content="Architectural expertise with monorepos">
+            <img src={NxImg} alt="nx-img" className="skill-img" />
             <div className="skill-counter-main photoshop-text">
-              <p>98%</p>
-              <p>PHOTOSHOP</p>
+              <p>91%</p>
+              <p>Nx</p>
             </div>
           </div>
-          <div className="design-skills-img-main adobe-xd flip_up">
-            <img src={AdobeImg} alt="adobe-xd-img" />
+          <div className="design-skills-img-main adobe-xd flip_up" data-tooltip-id="react" data-tooltip-content="Strong expertise in modern React ecosystem">
+            <img src={ReactImg} alt="react-img" className="skill-img" />
             <div className="skill-counter-main adobe-xd-text">
               <p>88%</p>
-              <p>ADOBE XD</p>
+              <p>React</p>
             </div>
           </div>
+          
 
-          <div className="design-skills-img-main sketch flip_up">
-            <img src={SketchImg} alt="sktech-img" />
+         <div className="design-skills-img-main sketch flip_up" data-tooltip-id="typescript" data-tooltip-content="Primary language for frontend/backend development">
+            <img src={TypeScriptImg} alt="sktech-img" className="skill-img" />
             <div className="skill-counter-main sketch-text">
-              <p>85%</p>
-              <p>SKETCH</p>
+              <p>95%</p>
+              <p>TypeScript</p>
             </div>
           </div>
-          <div className="design-skills-img-main invision flip_up">
-            <img src={InvisionImg} alt="invision-img" />
+          <div className="design-skills-img-main invision flip_up" data-tooltip-id="invision" data-tooltip-content="Main Design Tool">
+            <img src={FigmaImg} alt="figma-img" className="skill-img" />
             <div className="skill-counter-main invision-text">
               <p>89%</p>
-              <p>INVISION</p>
+              <p>Figma</p>
             </div>
-          </div> 
+          </div>
         </div>
-      </section> */}
+      </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
     </>
   );
