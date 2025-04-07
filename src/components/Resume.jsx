@@ -62,6 +62,83 @@ const Resume = () => {
       {/* <!-- ====================================== Section Education Experience ===================================== --> */}
       <section className="education-experience" id="resume">
         <div className="row">
+          <div className="col-xxl-6 col-lg-6 mb-4">
+            <div className="heading-container">
+              <h2 className="section-heading-text about-me fade_up">
+                Experience.
+              </h2>
+              <div className="line"></div>
+            </div>
+            <div className="education position-relative fade_up">
+              <div className="side_circle_ring">
+                <div className="small_yellow_border">
+                  <div className="small_yellow_circle"></div>
+                </div>
+              </div>
+              <div className="small_yellow_border_main">
+                <p className="bachelor">Frontend Architect - Lead</p>
+                <p className="cursus university">Acium Inc. | Miami, FL / 10/2023 - Present</p>
+                <p className="cursus">
+                  • Architected frontend for Enterprise Browser Management platform using Angular, Nx, TypeScript, PrimeNG and Tailwind CSS
+                  • Implemented micro frontend architecture with NX and Git submodules
+                  • Led frontend team to successful MVP delivery and feature development
+                  • Migrated from Angular 16 to 18 and Material to PrimeNG
+                  • Established testing standards with Jest and documentation practices
+                </p>
+              </div>
+            </div>
+            <div className="education position-relative fade_up">
+              <div className="side_circle_ring">
+                <div className="small_yellow_border">
+                  <div className="small_yellow_circle"></div>
+                </div>
+              </div>
+              <div className="small_yellow_border_main">
+                <p className="bachelor">Frontend Architect - Lead</p>
+                <p className="cursus university">itopia Inc. | Miami, FL / 10/2018 - 09/2023</p>
+                <p className="cursus">
+                  • Architected EdTech cloud-native SaaS using Angular and TypeScript
+                  • Developed PWA with offline capabilities using Angular PWA
+                  • Implemented browser-based HTML5 client with webRTC for desktop streaming
+                  • Led frontend team and established testing standards with Jasmine/Karma
+                  • Designed DaaS orchestration platform for GCP using Angular and Google APIs
+                </p>
+              </div>
+            </div>
+            <div className="education position-relative fade_up">
+              <div className="side_circle_ring">
+                <div className="small_yellow_border">
+                  <div className="small_yellow_circle"></div>
+                </div>
+              </div>
+              <div className="small_yellow_border_main">
+                <p className="bachelor">Senior Fullstack Developer</p>
+                <p className="cursus university">Reserva Inc | Havana / 02/2018 - 09/2018</p>
+                <p className="cursus">
+                  • Developed features for mobile and desktop platforms using Odoo Framework
+                  • Created chat module using Python, JavaScript, HTML, and CSS
+                  • Maintained Node.js applications with latest versions and security patches
+                </p>
+              </div>
+            </div>
+            <div className="education position-relative fade_up">
+              <div className="side_circle_ring">
+                <div className="small_yellow_border">
+                  <div className="small_yellow_circle"></div>
+                </div>
+              </div>
+              <div className="small_yellow_border_main">
+                <p className="bachelor">Fullstack Developer</p>
+                <p className="cursus university">UCI | Havana / 10/2012 - 01/2018</p>
+                <p className="cursus">
+                  • Redesigned and developed SIPAC workflow approval web application
+                  • Project adopted by several provinces and Central State Administration
+                  • Won 2016 CITMA Provincial Award
+                  • Technologies: PHP, PostgreSQL, JavaScript, CSS, HTML
+                </p>
+              </div>
+            </div>
+          </div> 
           <div className="col-xxl-6 col-lg-6">
             <div className="heading-container">
               <h2 className="section-heading-text about-me fade_up">
@@ -76,106 +153,12 @@ const Resume = () => {
                 </div>
               </div>
               <div className="small_yellow_border_main">
-                <p className="bachelor">Master in Design</p>
+                <p className="bachelor">Bachelor in Computer Science</p>
                 <p className="cursus university">
-                  Cambridge University / 2010 - 2014
+                  University of Informatics Science / 2007 - 2012
                 </p>
                 <p className="cursus">
-                  Eu nulla at mauris cursus consectetur posuere iaculis ipsum
-                  neque. Morbi felis pellentesque ligula sed dictumst imperdiet
-                  nunc vulputate.
-                </p>
-              </div>
-            </div>
-            <div className="education position-relative fade_up">
-              <div className="side_circle_ring">
-                <div className="small_yellow_border">
-                  <div className="small_yellow_circle"></div>
-                </div>
-              </div>
-              <div className="small_yellow_border_main">
-                <p className="bachelor">Bachelor in Science</p>
-                <p className="cursus university">
-                  Cambridge University / 2014 - 2016
-                </p>
-                <p className="cursus">
-                  Porttitor euismod at semper ut massa. Lorem varius magna
-                  volutpat nunc. Et faucibus scelerisque donec augue eleifenda
-                  morbi.
-                </p>
-              </div>
-            </div>
-            <div className="education position-relative fade_up">
-              <div className="side_circle_ring">
-                <div className="small_yellow_border">
-                  <div className="small_yellow_circle"></div>
-                </div>
-              </div>
-              <div className="small_yellow_border_main">
-                <p className="bachelor">Diploma in Computer</p>
-                <p className="cursus university">
-                  Cambridge University / 2016 - 2018
-                </p>
-                <p className="cursus">
-                  Adipiscing sed magna tempus arcu morbi. Ipsum pellentesque
-                  lorem suscipit in. Hendrerit rhoncus quis tempor urna pharetra
-                  ut erat.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-6 col-lg-6">
-            <div className="heading-container">
-              <h2 className="section-heading-text about-me fade_up">
-                Experience.
-              </h2>
-              <div className="line"></div>
-            </div>
-            <div className="education position-relative fade_up">
-              <div className="side_circle_ring">
-                <div className="small_yellow_border">
-                  <div className="small_yellow_circle"></div>
-                </div>
-              </div>
-              <div className="small_yellow_border_main">
-                <p className="bachelor">LEAD DESIGN & DEVELOPMENT</p>
-                <p className="cursus university">Envato / 2020 - Current</p>
-                <p className="cursus">
-                  Ipsum erat duis leo lectus tellus neque dictumst. Dignissim
-                  tortor quis nisl mi lectus. Massa facilisis ac eget fermentum
-                  vitae. Dictum rutrum sed.
-                </p>
-              </div>
-            </div>
-            <div className="education position-relative fade_up">
-              <div className="side_circle_ring">
-                <div className="small_yellow_border">
-                  <div className="small_yellow_circle"></div>
-                </div>
-              </div>
-              <div className="small_yellow_border_main">
-                <p className="bachelor">SENIOR DESIGN & DEVELOPEMNT</p>
-                <p className="cursus university">Apple / 2019 - 2020</p>
-                <p className="cursus">
-                  Congue dolor gravida eu tristique netus posuere dolor.
-                  Penatibus imperdiet egestas ut sit scelerisque sapien a lor
-                  sjsa.
-                </p>
-              </div>
-            </div>
-            <div className="education position-relative fade_up">
-              <div className="side_circle_ring">
-                <div className="small_yellow_border">
-                  <div className="small_yellow_circle"></div>
-                </div>
-              </div>
-              <div className="small_yellow_border_main">
-                <p className="bachelor">JUNIOR DESIGN & DEVELOPMENT</p>
-                <p className="cursus university">Twitter / 2018 - 2019</p>
-                <p className="cursus">
-                  Aliquet at interdum pellentesque non fringilla eget orci
-                  suspendisse. A iaculis augue vitae ultricies fusce sit dolor
-                  gravida .
+                  Comprehensive study of software engineering, algorithms, and advanced programming concepts. Specialized in web technologies and distributed systems. Graduated with honors.
                 </p>
               </div>
             </div>
@@ -261,130 +244,6 @@ const Resume = () => {
         </div>
       </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
-      {/* <!-- ====================================== Section Award ===================================== --> */}
-      <section className="awards-section overflow-hidden">
-        <div className="heading-container">
-          <h2 className="section-heading-text coding-skill-text fade_up">
-            Awards.
-          </h2>
-          <div className="line"></div>
-        </div>
-        <div className="row awards-row">
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={WinnerAward}
-                        alt="winner-award4"
-                      />
-                      <p className="award-yer">2025</p>
-                    </div>
-                    <p className="award-interior">Awwwards Interior</p>
-                    <p className="award-winner-text">Winner</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={WinnerAward2}
-                        alt="winner-award2"
-                      />
-                      <p className="award-yer">2024</p>
-                    </div>
-                    <p className="award-interior">The Webby Awards</p>
-                    <p className="award-winner-text">Nominee</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={WinnerAward3}
-                        alt="winner-award3"
-                      />
-                      <p className="award-yer">2023</p>
-                    </div>
-                    <p className="award-interior">EWA Design</p>
-                    <p className="award-winner-text">Winner</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="col-xxl-6 col-xl-6 col-lg-6 col-md-6">
-            <div className="box-item flip_up">
-              <div className="flip-box">
-                <div className="flip-box-front">
-                  <div className="inner">
-                    <div className="years-award-img">
-                      <img
-                        className="winner-award"
-                        src={WinnerAward4}
-                        alt="winner-award4"
-                      />
-                      <p className="award-yer">2022</p>
-                    </div>
-                    <p className="award-interior">BEST Star</p>
-                    <p className="award-winner-text">Winner</p>
-                  </div>
-                </div>
-                <div className="flip-box-back">
-                  <div className="inner">
-                    <p className="flip-back-text">
-                      Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                      Sit, perferendis!
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* <!-- ====================================== Section Award End ===================================== --> */}
     </>
   );
 };

@@ -156,7 +156,7 @@ const Home = () => {
             <Link to="mailto:hello@biogi.com" className="profile-media-icons">
               <img src={EmailSvg} alt="email-svg" />
             </Link>
-            <Link to="https://medium.com" className="profile-media-icons">
+            <Link to="https://medium.com/@teresitaya" className="profile-media-icons">
               <img src={MediumSvg} alt="medium-svg" />
             </Link>
           </div>
