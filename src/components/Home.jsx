@@ -7,7 +7,7 @@ import ResumeSvg from "../assets/images/svg/resume-svg.svg";
 import ContactSvg from "../assets/images/svg/contact-svg.svg";
 import MediumSvg from "../assets/images/svg/medium-svg.svg";
 import MariaMainImg from "../assets/images/3.jpeg";
-import CircularImg from "../assets/images/circular-img.png";
+import CircularImg from "../assets/images/2X1.png";
 import FlowerImg from "../assets/images/flower.png";
 import BrandLogo1 from "../assets/images/angular.gif";
 import BrandLogo2 from "../assets/images/react.svg";
