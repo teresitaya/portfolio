@@ -9,20 +9,31 @@ import MediumSvg from "../assets/images/svg/medium-svg.svg";
 import MariaMainImg from "../assets/images/3.jpeg";
 import CircularImg from "../assets/images/circular-img.png";
 import FlowerImg from "../assets/images/flower.png";
-import BrandLogo1 from "../assets/images/brand-logo1.png";
-import BrandLogo2 from "../assets/images/brand-logo2.png";
-import BrandLogo3 from "../assets/images/brand-logo3.png";
-import BrandLogo4 from "../assets/images/brand-logo4.png";
-import BrandLogo5 from "../assets/images/brand-logo5.png";
-import BrandLogo6 from "../assets/images/brand-logo6.png";
-import BrandLogo7 from "../assets/images/brand-logo7.png";
-import BrandLogo8 from "../assets/images/brand-logo8.png";
+import BrandLogo1 from "../assets/images/angular.gif";
+import BrandLogo2 from "../assets/images/react.svg";
+import BrandLogo3 from "../assets/images/nx.svg";
+import BrandLogo4 from "../assets/images/typescript.png";
+import BrandLogo5 from "../assets/images/js.webp";
+import BrandLogo6 from "../assets/images/tailwindcss.svg";
+import BrandLogo7 from "../assets/images/css.svg";
+import BrandLogo8 from "../assets/images/html5.svg";
 import AboutSection from "./About";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import $ from "jquery";
 import CV from "../assets/pdf/maria_resume.pdf";
 import { Link } from "react-router-dom";
+const technologies = [
+  { src: BrandLogo1, name: 'Angular', category: 'framework' },
+   { src: BrandLogo2, name: 'React', category: 'framework' },
+  { src: BrandLogo3, name: 'TypeScript', category: 'language' },
+ { src: BrandLogo4, name: 'Node.js', category: 'runtime' },
+  { src: BrandLogo5, name: 'Nx', category: 'tooling', class: 'js-logo' },
+  { src: BrandLogo6, name: 'Tailwind', category: 'styling', class:'tailwind-logo' },
+  { src: BrandLogo7, name: 'CSS', category: 'styling', class: 'css-logo' },
+  { src: BrandLogo8, name: 'HTML', category: 'language', class: 'html-logo' } 
+];
+
 const Home = () => {
   //Text
   const firstTexts = ["Frontend Architect", "Lead Developer"];
@@ -296,69 +307,15 @@ const Home = () => {
           <div className="logos logos2">
             <div className="logos-slide">
               <div className="marquee__content">
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo1}
-                    alt="brand-logo1"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo2}
-                    alt="brand-logo2"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo3}
-                    alt="brand-logo3"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo4}
-                    alt="brand-logo4"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo5}
-                    alt="brand-logo5"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo6}
-                    alt="brand-logo6"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo7}
-                    alt="brand-logo7"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo8}
-                    alt="brand-logo8"
-                  />
-                </div>
-                <div className="marquee-img-main">
-                  <img
-                    className="brand-logos"
-                    src={BrandLogo7}
-                    alt="brand-logo9"
-                  />
-                </div>
+                {technologies.map((tech, index) => (
+                  <div key={index} className="marquee-img-main">
+                    <img
+                      className={`brand-logos ${tech.class}`}
+                      src={tech.src}
+                      alt={`${tech.name}-logo`}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
           </div>

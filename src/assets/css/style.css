@@ -640,6 +640,21 @@ h1 span {
 .logos-slide {
     animation: 40s slide infinite linear;
 }
+.brand-logos {
+    max-width: 9rem;
+}
+.js-logo {
+    max-width: 5rem;
+}
+.tailwind-logo {
+    max-width: 12rem;
+}
+.css-logo {
+    max-width: 3.5rem;
+}
+.html-logo {
+    max-width: 3rem;
+}
 
 @keyframes slide {
     0% {
