@@ -244,6 +244,7 @@ const Contact = () => {
           )}
         </form>
         <iframe
+          title="Office Location Map"
           className="map-iframe"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57569.95558393722!2d-80.23583075566407!3d25.782045300000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6c6e2939b0f%3A0x68e7d6c7ac91a10a!2sBrickell%2C%20Miami%2C%20FL!5e0!3m2!1sen!2sus!4v1712532517653!5m2!1sen!2sus"
           allowFullScreen=""
