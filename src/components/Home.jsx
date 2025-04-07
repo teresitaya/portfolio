@@ -42,35 +42,32 @@ const Home = () => {
    "React Developer",
    "Cloud Native Specialist",
   ];
-  const intervalTime = 600;
 
   const [firstTextIndex, setFirstTextIndex] = useState(0);
   const [secondTextIndex, setSecondTextIndex] = useState(0);
 
-  useEffect(() => {
-    const firstTextTimeout = setTimeout(() => {
-      setFirstTextIndex((prevIndex) => (prevIndex + 1) % firstTexts.length);
-    }, intervalTime * 3);
+// In Home.jsx
+useEffect(() => {
+  const interval = setInterval(() => {
+    setFirstTextIndex((prevIndex) => (prevIndex + 1) % firstTexts.length);
+  }, 2000);
+  return () => clearInterval(interval);
+}, [firstTexts.length]); // Add firstTexts.length as dependency
 
-    return () => clearTimeout(firstTextTimeout);
-  }, [firstTextIndex]);
+useEffect(() => {
+  const interval = setInterval(() => {
+    setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
+  }, 2000);
+  return () => clearInterval(interval);
+}, [secondTexts.length]); // Add secondTexts.length as dependency
 
-  useEffect(() => {
-    const secondTextTimeout = setTimeout(() => {
-      setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
-    }, intervalTime * 3);
-
-    return () => clearTimeout(secondTextTimeout);
-  }, [secondTextIndex]);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFirstTextIndex((prevIndex) => (prevIndex + 1) % firstTexts.length);
-      setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
-    }, intervalTime * 7);
-
-    return () => clearInterval(interval);
-  }, []);
+useEffect(() => {
+  const interval = setInterval(() => {
+    setFirstTextIndex((prevIndex) => (prevIndex + 1) % firstTexts.length);
+    setSecondTextIndex((prevIndex) => (prevIndex + 1) % secondTexts.length);
+  }, 2000);
+  return () => clearInterval(interval);
+}, [firstTexts.length, secondTexts.length]); // Add both dependencies
 
   // Logo marquee
   useEffect(() => {
