@@ -31,15 +31,15 @@ import AboutSection from "./About";
 import Resume from "./Resume";
 import Contact from "./Contact";
 import $ from "jquery";
-import CV from "../assets/pdf/olivia_resume.pdf";
+import CV from "../assets/pdf/maria_resume.pdf";
 import { Link } from "react-router-dom";
 const Home = () => {
   //Text
-  const firstTexts = ["Architect", "Developer"];
+  const firstTexts = ["Frontend Architect", "Lead Developer"];
   const secondTexts = [
-   "Frontend Developer", 
-   "Frontend Architect",
-   "Full Stack Developer",
+   "Angular Expert", 
+   "React Developer",
+   "Cloud Native Specialist",
   ];
   const intervalTime = 600;
 
@@ -270,7 +270,7 @@ const Home = () => {
                 {secondTexts[secondTextIndex]}
               </h3>
               <p className="best fade_down">
-              Frontend Architect with 12 years experience and proven track record building scalable applications. I am passionate about crafting intuitive, user-centric interfaces loved by the users they serve. 
+              Frontend Architect with 12 years of experience specializing in Angular, React, and cloud-native applications. Expert in architecting scalable frontend solutions using modern frameworks and micro-frontend principles. Passionate about creating intuitive, user-centric interfaces and mentoring development teams. 
               </p>
               <div className="section-one-btns-main fade_down">
                 <div className="wrapper">
