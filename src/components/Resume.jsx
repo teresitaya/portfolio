@@ -1,23 +1,15 @@
-import React, { useEffect, useRef } from "react";
-import FigmaImg from "../assets/images/figma-img.png";
-import PhotoShopImg from "../assets/images/photoshop-img.png";
-import AdobeImg from "../assets/images/adobe-xd-img.png";
-import SketchImg from "../assets/images/sktech-img.png";
-import InvisionImg from "../assets/images/invision-img.png";
-import WinnerAward from "../assets/images/winner-award.png";
-import WinnerAward2 from "../assets/images/winner-award2.png";
-import WinnerAward3 from "../assets/images/winner-award3.png";
-import WinnerAward4 from "../assets/images/winner-award4.png";
+import React, { useEffect, useRef, useMemo } from "react";
+import { Tooltip } from 'react-tooltip';
 
 const Resume = () => {
-  const colors = [
+  const colors = useMemo(() => [
     "#BCE70C",
     "#FF759C",
     "#00CC97",
     "#FFDB59",
     "#6F39FD",
     "#FF7D61",
-  ];
+  ], []);
   const progressRef = useRef(null);
   const hasAnimated = useRef(false); // Track if the animation has already run
 
@@ -170,46 +162,61 @@ const Resume = () => {
       <section className="coding-skill-section">
         <div className="heading-container">
           <h2 className="section-heading-text coding-skill-text fade_up">
-            Coding Skills.
+            Overall Skills.
           </h2>
           <div className="line"></div>
         </div>
         <div id="progress" ref={progressRef}>
-          <div data-num="79" className="progress-item fade_up">
-            sd
+          {/* Frontend Skills */}
+          <div data-num="95" className="progress-item fade_up" data-tooltip-id="frontend" data-tooltip-content="Frontend Frameworks">
+            Frontend Frameworks
           </div>
-          <div data-num="92" className="progress-item fade_up">
-            sd
+          <div data-num="94" className="progress-item fade_up" data-tooltip-id="ui" data-tooltip-content="UI Libraries">
+            UI Libraries
           </div>
-          <div data-num="85" className="progress-item fade_up">
-            sd
+          <div data-num="93" className="progress-item fade_up" data-tooltip-id="core" data-tooltip-content="Core Web Technologies">
+            Core Web Technologies
           </div>
-          <div data-num="70" className="progress-item fade_up">
-            sd
+          
+          {/* Architecture Skills */}
+          <div data-num="96" className="progress-item fade_up" data-tooltip-id="architecture" data-tooltip-content="Architecture & DevOps">
+            Architecture & DevOps
           </div>
-          <div data-num="76" className="progress-item fade_up">
-            ds
+          
+          {/* Testing Skills */}
+          <div data-num="84" className="progress-item fade_up" data-tooltip-id="testing" data-tooltip-content="Testing">
+            Testing
           </div>
-          <div data-num="83" className="progress-item fade_up">
-            ds
+          
+          {/* Backend Skills */}
+          <div data-num="80" className="progress-item fade_up" data-tooltip-id="backend" data-tooltip-content="Backend Technologies">
+            Backend Technologies
           </div>
+          
+          {/* Tooltips */}
+          <Tooltip id="frontend" />
+          <Tooltip id="ui" />
+          <Tooltip id="core" />
+          <Tooltip id="architecture" />
+          <Tooltip id="testing" />
+          <Tooltip id="backend" />
         </div>
       </section>
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
       {/* <!-- ====================================== Section Design Skill ===================================== --> */}
-      <section className="design-skill-section">
+   {/*    <section className="design-skill-section">
         <div className="heading-container">
           <h2 className="section-heading-text design-skill-text fade_up">
-            Design Skills.
+            Coding Skills.
           </h2>
           <div className="line"></div>
         </div>
         <div className="design-skill-sub-section">
           <div className="design-skills-img-main flip_up">
-            <img src={FigmaImg} alt="figma-img" />
+            <img src={AngularImg} alt="figma-img" />
             <div className="skill-counter-main">
               <p>94%</p>
-              <p>HTML, CSS</p>
+              <p>Angular, Nx</p>
             </div>
           </div>
           <div className="design-skills-img-main photoshop flip_up">
@@ -240,9 +247,9 @@ const Resume = () => {
               <p>89%</p>
               <p>INVISION</p>
             </div>
-          </div>
+          </div> 
         </div>
-      </section>
+      </section> */}
       {/* <!-- ====================================== Section Coding Skill End ===================================== --> */}
     </>
   );
