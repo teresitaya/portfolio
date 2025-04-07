@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  // Initialize EmailJS
+  useEffect(() => {
+    emailjs.init('CPU88D_5K0brYJZ_q');
+  }, []);
   const [inputState, setInputState] = useState({
     name: "",
     email: "",
@@ -9,37 +14,95 @@ const Contact = () => {
   });
 
   useEffect(() => {
-    const inputs = document.querySelectorAll("input");
+    const inputs = document.querySelectorAll(".form__input");
+
+    const handleFocus = (e) => {
+      const parent = e.target.closest('.form');
+      if (parent) {
+        parent.classList.add("active");
+      }
+    };
+
+    const handleFocusOut = (e) => {
+      const parent = e.target.closest('.form');
+      if (parent) {
+        if (e.target.value === "") {
+          parent.classList.remove("active");
+        } else {
+          parent.classList.add("active");
+        }
+      }
+    };
 
     inputs.forEach((input) => {
-      input.addEventListener("focus", () => {
-        input.parentElement.classNameList.add("active");
-      });
-
-      input.addEventListener("focusout", () => {
-        if (input.value === "") {
-          input.parentElement.classNameList.remove("active");
-        } else {
-          input.parentElement.classNameList.add("active");
-        }
-      });
+      input.addEventListener("focus", handleFocus);
+      input.addEventListener("focusout", handleFocusOut);
     });
 
     return () => {
       inputs.forEach((input) => {
-        input.removeEventListener("focus", () => {});
-        input.removeEventListener("focusout", () => {});
+        input.removeEventListener("focus", handleFocus);
+        input.removeEventListener("focusout", handleFocusOut);
       });
     };
   }, []);
 
   const handleChange = (e) => {
-    const { id, value } = e.target;
+    const { name, value } = e.target;
+    const key = name === 'from_name' ? 'name' :
+               name === 'from_email' ? 'email' : name;
     setInputState((prevState) => ({
       ...prevState,
-      [id]: value,
+      [key]: value,
     }));
   };
+
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(false);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const { name, email, subject, message } = inputState;
+    
+    // Validate form
+    if (!name || !email || !subject || !message) {
+      alert('Please fill in all fields');
+      return;
+    }
+
+    setSending(true);
+    setError(null);
+    setSuccess(false);
+
+    try {
+      await emailjs.send(
+        'service_7ab1v6w',  // Service ID
+        'template_z91xhhz', // Template ID
+        {
+          to_name: 'Maria Rosales',
+          from_name: name,
+          from_email: email,
+          message: message,
+          subject: subject,
+        },
+        'CPU88D_5K0brYJZ_q' // Public Key
+      );
+
+      setSuccess(true);
+      setInputState({
+        name: "",
+        email: "",
+        subject: "",
+        message: "",
+      });
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+      console.error('Failed to send email:', err);
+    } finally {
+      setSending(false);
+    }
+};
   return (
     <>
       {/* <!-- ====================================== Section Contact ===================================== --> */}
@@ -72,7 +135,7 @@ const Contact = () => {
             <div>
               <p className="contact-email-text">EMAIL</p>
               <p className="contact-email">
-                <a href="mailto:hello@biogi.com">hello@biogi.com</a>
+                <a href="mailto:teresitaya@gmail.com">teresitaya@gmail.com</a>
               </p>
             </div>
           </div>
@@ -94,12 +157,12 @@ const Contact = () => {
             <div>
               <p className="contact-email-text">PHONE</p>
               <p className="contact-email">
-                <a href="tel:+12345678899">+1 234 567 8899</a>
+                <a href="tel:+17868381499">+1 (786) 838 1499</a>
               </p>
             </div>
           </div>
         </div>
-        <div className="form-container">
+        <form onSubmit={handleSubmit} className="form-container">
           <div className="form">
             <label htmlFor="name" className="form__label">
               NAME
@@ -108,7 +171,7 @@ const Contact = () => {
               type="text"
               className="form__input"
               placeholder="Your name"
-              id="name"
+              name="from_name"
               required
               autoComplete="off"
               value={inputState.name}
@@ -123,7 +186,7 @@ const Contact = () => {
               type="email"
               className="form__input"
               placeholder="Your email"
-              id="email"
+              name="from_email"
               required
               autoComplete="off"
               value={inputState.email}
@@ -138,7 +201,7 @@ const Contact = () => {
               type="text"
               className="form__input"
               placeholder="Your subject"
-              id="subject"
+              name="subject"
               required
               autoComplete="off"
               value={inputState.subject}
@@ -149,34 +212,48 @@ const Contact = () => {
             <label htmlFor="message" className="form__label">
               MESSAGE
             </label>
-            <input
-              type="text"
+            <textarea
               className="form__input"
               placeholder="Write your text..."
-              id="message"
+              name="message"
               required
               autoComplete="off"
               value={inputState.message}
               onChange={handleChange}
-            />
+              rows="4"
+            ></textarea>
           </div>
-        </div>
-        <div className="wrapper blog-btn">
-          <a className="btn-hover" href="#">
-            Submit Now
-          </a>
-        </div>
+          <div className="wrapper blog-btn">
+            <button 
+              type="submit" 
+              className="btn-hover" 
+              disabled={sending}
+            >
+              {sending ? 'Sending...' : 'Submit Now'}
+            </button>
+          </div>
+          {error && (
+            <div style={{ color: 'red', marginTop: '1rem', textAlign: 'center' }}>
+              {error}
+            </div>
+          )}
+          {success && (
+            <div style={{ color: 'green', marginTop: '1rem', textAlign: 'center' }}>
+              Message sent successfully!
+            </div>
+          )}
+        </form>
         <iframe
           className="map-iframe"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11661.278162829134!2d-76.16113884753138!3d43.0557465765357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d9f3add89232d3%3A0x516c4febad79a023!2sNear%20Northeast%2C%20Syracuse%2C%20NY%2013203%2C%20USA!5e0!3m2!1sen!2sin!4v1704092010021!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57569.95558393722!2d-80.23583075566407!3d25.782045300000012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b6c6e2939b0f%3A0x68e7d6c7ac91a10a!2sBrickell%2C%20Miami%2C%20FL!5e0!3m2!1sen!2sus!4v1712532517653!5m2!1sen!2sus"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
         <div className="footer">
-          © 2024 | All rights reserved by
+          © 2025 | All rights reserved by
           <span>
-            <a href="https://1.envato.market/website-portfolio">The_Krishna</a>
+            <a href="https://teresitaya.com" target="_blank" rel="noopener noreferrer">teresitaya</a>
           </span>
         </div>
       </section>
