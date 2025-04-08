@@ -1,7 +1,7 @@
 {
   "name": "teresitaya-cv",
   "version": "0.1.0",
-  "homepage": "https://teresitaya.github.io/portfolio",
+  "homepage": "www.teresitaya.com",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
