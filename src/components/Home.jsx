@@ -130,7 +130,12 @@ useEffect(() => {
   const handleClick = (event, id) => {
     event.preventDefault();
     setActiveLink(id);
-    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log(`Element with id '${id}' not found`);
+    }
   };
   return (
     <>
@@ -265,12 +270,13 @@ useEffect(() => {
               Crafting seamless digital experiences through modern Frontend Architecture. </p>
               <div className="section-one-btns-main fade_down">
                 <div className="wrapper">
-                  <Link className="btn-hover" to="/portfolio">
+                  <a className="btn-hover" href="https://github.com/teresitaya" target="_blank" rel="noreferrer">
                     View Work
-                  </Link>
+                  </a>
                 </div>
                 <div className="wrapper">
-                  <Link className="btn-hover btn-hover2" to="/contact">
+                  <Link className="btn-hover btn-hover2" href="#contact"
+                    onClick={(e) => handleClick(e, "contact")}>
                     Contact Me
                   </Link>
                 </div>
